@@ -1,0 +1,371 @@
+{
+  "info": {
+    "_postman_id": "c2d657bc-310f-4dfa-8980-2d095f0c6b3f",
+    "name": "Atelier GraphQL Mise en place d’un API GraphQL",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "44349778",
+    "_collection_link": "https://go.postman.co/collection/44349778-c2d657bc-310f-4dfa-8980-2d095f0c6b3f?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "http://localhost:8080/WorkshopGraphQL_war/graphql",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "graphql",
+          "graphql": {
+            "query": "query {\r\n  getAllOptions {\r\n    codeOption\r\n    libelle\r\n    domaine\r\n    responsable\r\n    credits\r\n    semestre\r\n    capacite\r\n  }\r\n}",
+            "variables": ""
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/WorkshopGraphQL_war/graphql",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "WorkshopGraphQL_war",
+            "graphql"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8080/WorkshopGraphQL_war/graphql",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "graphql",
+          "graphql": {
+            "query": "query { getOptionByCode(codeOption: 1) { codeOption libelle domaine responsable } }",
+            "variables": ""
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/WorkshopGraphQL_war/graphql",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "WorkshopGraphQL_war",
+            "graphql"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8080/WorkshopGraphQL_war/graphql",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "graphql",
+          "graphql": {
+            "query": "query { getOptionsByDomaine(domaine: \"Informatique\") { codeOption libelle domaine } }",
+            "variables": ""
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/WorkshopGraphQL_war/graphql",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "WorkshopGraphQL_war",
+            "graphql"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8080/WorkshopGraphQL_war/graphql",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "graphql",
+          "graphql": {
+            "query": "mutation { addOption(codeOption: 10, libelle: \"BI\", domaine: \"Informatique\", responsable: \"Mr. BI\", credits: 30, semestre: 2, capacite: 40) }",
+            "variables": ""
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/WorkshopGraphQL_war/graphql",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "WorkshopGraphQL_war",
+            "graphql"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8080/WorkshopGraphQL_war/graphql",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "graphql",
+          "graphql": {
+            "query": "mutation { updateOption(codeOption: 10, libelle: \"BI Updated\", domaine: \"Informatique\", responsable: \"Mr. BI Updated\", credits: 30, semestre: 2, capacite: 100) }",
+            "variables": ""
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/WorkshopGraphQL_war/graphql",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "WorkshopGraphQL_war",
+            "graphql"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8080/WorkshopGraphQL_war/graphql",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "graphql",
+          "graphql": {
+            "query": "mutation { deleteOption(codeOption: 10) }",
+            "variables": ""
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/WorkshopGraphQL_war/graphql",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "WorkshopGraphQL_war",
+            "graphql"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8080/WorkshopGraphQL_war/graphql",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "graphql",
+          "graphql": {
+            "query": "query { getAllEtudiants { identifiant nom prenom anneeEtude email option { libelle } } }",
+            "variables": ""
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/WorkshopGraphQL_war/graphql",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "WorkshopGraphQL_war",
+            "graphql"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8080/WorkshopGraphQL_war/graphql",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "graphql",
+          "graphql": {
+            "query": "query { \r\n  getEtudiantByIdentifiant(identifiant: \"I001\") { \r\n    identifiant nom prenom anneeEtude email option { codeOption libelle } \r\n  } \r\n}",
+            "variables": ""
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/WorkshopGraphQL_war/graphql",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "WorkshopGraphQL_war",
+            "graphql"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8080/WorkshopGraphQL_war/graphql",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "graphql",
+          "graphql": {
+            "query": "mutation { addEtudiant(identifiant: \"ETU100\", nom: \"Chaouch\", prenom: \"Youssef\", codeOption: 1, anneeEtude: 2023, email: \"youssef@esprit.tn\") }",
+            "variables": ""
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/WorkshopGraphQL_war/graphql",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "WorkshopGraphQL_war",
+            "graphql"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8080/WorkshopGraphQL_war/graphql",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "graphql",
+          "graphql": {
+            "query": "mutation { updateEtudiant(identifiant: \"ETU100\", nom: \"Chaouch\", prenom: \"Youssef Updated\", codeOption: 2, anneeEtude: 2024, email: \"updated@esprit.tn\") }",
+            "variables": ""
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/WorkshopGraphQL_war/graphql",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "WorkshopGraphQL_war",
+            "graphql"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8080/WorkshopGraphQL_war/graphql",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "graphql",
+          "graphql": {
+            "query": "mutation { deleteEtudiant(identifiant: \"ETU100\") }",
+            "variables": ""
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/WorkshopGraphQL_war/graphql",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "WorkshopGraphQL_war",
+            "graphql"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8080/WorkshopGraphQL_war/graphql",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "graphql",
+          "graphql": {
+            "query": "query MultiTest {\r\n  allOpts: getAllOptions { codeOption libelle }\r\n  infoOpts: getOptionsByDomaine(domaine: \"Informatique\") { codeOption libelle capacite }\r\n  allEtuds: getAllEtudiants { identifiant nom option { libelle } }\r\n}",
+            "variables": ""
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/WorkshopGraphQL_war/graphql",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "WorkshopGraphQL_war",
+            "graphql"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
